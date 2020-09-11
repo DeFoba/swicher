@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#9CC2CE">
     <link rel="stylesheet" href="style/main.css">
     <title>Swiper</title>
 </head>
 <body>
     <div id="content">
         <div id="modal">
-            <div id="modal-block">+</div>
-            <div id="modal-block">-</div>
-            <div id="modal-block">*</div>
-            <div id="modal-block">/</div>
+            <div id="modal-block"><span>+</span></div>
+            <div id="modal-block"><span>-</span></div>
+            <div id="modal-block"><span>*</span></div>
+            <div id="modal-block"><span>/</span></div>
             <div id="block"></div>
         </div>
         <div id="swiper">
 
+        </div>
+        <div id="modaler">
+            <div id="modal-triger" onclick="closeModal()"></div>
+            <div id="widget">
+                <h1 id="widget-title">Text</h1>
+                <div id="widget-content"></div>
+            </div>
         </div>
     </div>
     <script src="script/main.js"></script>
