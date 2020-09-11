@@ -16,7 +16,7 @@ document.addEventListener('mousedown', ({ target }) => {
     }
 });
 
-document.addEventListener('touchend', ({ target }) => {
+document.addEventListener('click', ({ target }) => {
     if ( target.id == 'swiper' ) {
         if (!touched) {
             touched = true;
@@ -28,6 +28,7 @@ document.addEventListener('touchend', ({ target }) => {
             modalBlocker.style.display = 'block';
         }
     }
+    if (target.id == 'html') touched = false;
 });
 
 document.addEventListener('mouseup', ({ target }) => {
@@ -45,6 +46,7 @@ function showModal(target) {
     modaler.style.transform = 'scale(1)';
 }
 function closeModal() {
+    touched = false;
     widget.style.transform = 'translate(-50%, -50%) scale(0)';
     modaler.style.filter = 'opacity(0)';
     setTimeout(() => { modaler.style.transform = 'scale(0)'}, 300 );
